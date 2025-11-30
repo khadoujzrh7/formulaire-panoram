@@ -1,0 +1,190 @@
+/* CSS pour l'apparence sombre et cinématographique (Bleu Roi & Doré) */
+body {
+    font-family: 'Cairo', sans-serif;
+    background-color: #1a1a2e; /* Fond sombre de la page (noir/bleu très foncé) */
+    color: #ffffff;
+    margin: 0;
+    padding: 0;
+    direction: rtl; /* Direction droite-à-gauche pour l'arabe */
+    text-align: right;
+    line-height: 1.6;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 5%;
+    background-color: #0f0f1a; /* Couleur plus foncée pour l'en-tête */
+    border-bottom: 5px solid #ffcc00; /* Bande dorée */
+}
+
+.logo-container {
+    width: 100px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Liens des logos الثابتة */
+.university-logo { content: url("https://i.imgur.com/bce085.jpg"); }
+.club-logo { content: url("https://i.imgur.com/bce0e2.jpg"); }
+
+.logo {
+    max-width: 100%;
+    height: auto;
+    border-radius: 50%; 
+}
+
+.title-container {
+    text-align: center;
+    flex-grow: 1;
+}
+
+.main-title {
+    font-size: 2.5em;
+    color: #ffcc00; /* Couleur dorée pour le titre principal */
+    margin: 0;
+    text-shadow: 2px 2px 4px #000000;
+}
+
+.subtitle {
+    font-size: 1.2em;
+    color: #cccccc;
+    margin-top: 5px;
+}
+
+.container {
+    max-width: 800px;
+    margin: 30px auto;
+    padding: 20px 40px;
+    background-color: #1c1c6e; /* BLEU ROI FONCÉ pour le fond du formulaire */
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+.intro-section {
+    text-align: center;
+    padding-bottom: 20px;
+    margin-bottom: 30px;
+    border-bottom: 1px dashed #7f7fbf; /* Ligne de séparation plus claire */
+}
+
+.section-title {
+    color: #ffcc00;
+    font-size: 1.8em;
+}
+
+.form-section-title {
+    color: #99c2ff; /* Bleu clair pour les titres de section */
+    margin-top: 30px;
+    margin-bottom: 15px;
+    padding-bottom: 5px;
+    border-bottom: 2px solid #ffcc00;
+    display: inline-block;
+}
+
+.input-group {
+    margin-bottom: 20px;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+.input-group input, 
+.input-group select, 
+.input-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #5c5c8e;
+    border-radius: 5px;
+    background-color: #3b3b5b; /* Fond des champs plus clair que le fond du conteneur */
+    color: #ffffff;
+    font-size: 1em;
+    box-sizing: border-box;
+}
+
+.input-group textarea {
+    resize: vertical;
+}
+
+.hint {
+    font-size: 0.9em;
+    color: #aaaaaa;
+    margin-top: 5px;
+}
+
+button[type="submit"] {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    background-color: #ffcc00; /* Bouton doré */
+    color: #1a1a2e;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 30px;
+}
+
+button[type="submit"]:hover {
+    background-color: #e6b800;
+}
+
+/* Messages de succès/erreur */
+.message-box {
+    padding: 25px;
+    border-radius: 8px;
+    margin-top: 30px;
+    text-align: center;
+}
+
+.success {
+    background-color: #38761d;
+    border: 3px solid #6aa84f;
+}
+
+.error {
+    background-color: #cc0000;
+    border: 3px solid #ff6666;
+}
+
+.message-title {
+    color: #ffffff;
+    margin-top: 0;
+    font-size: 1.8em;
+}
+
+.important-note {
+    font-size: 1.1em;
+    margin-top: 15px;
+}
+
+.telegram-number {
+    font-size: 2em;
+    color: #ffcc00; 
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        padding: 15px 5%;
+    }
+    .logo-container {
+        margin: 10px 0;
+    }
+    .main-title {
+        font-size: 2em;
+    }
+    .container {
+        padding: 20px;
+    }
+}

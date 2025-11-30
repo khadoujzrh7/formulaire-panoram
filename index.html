@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تسجيل بانوراما الجامعة للفيلم القصير</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+    
+    <style>
+        /* CSS complet pour l'apparence sombre et cinématographique */
+        body {
+            font-family: 'Cairo', sans-serif;
+            background-color: #1a1a2e;
+            color: #ffffff;
+            margin: 0;
+            padding: 0;
+            direction: rtl;
+            text-align: right;
+            line-height: 1.6;
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 5%;
+            background-color: #0f0f1a;
+            border-bottom: 5px solid #ffcc00;
+        }
+
+        .logo-container {
+            width: 100px;
+            height: 100px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .logo {
+            max-width: 100%;
+            height: auto;
+            border-radius: 50%; 
+        }
+
+        .title-container {
+            text-align: center;
+            flex-grow: 1;
+        }
+
+        .main-title {
+            font-size: 2.5em;
+            color: #ffcc00;
+            margin: 0;
+            text-shadow: 2px 2px 4px #000000;
+        }
+
+        .subtitle {
+            font-size: 1.2em;
+            color: #cccccc;
+            margin-top: 5px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 30px auto;
+            padding: 20px 40px;
+            background-color: #1c1c6e;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+        }
+
+        .intro-section {
+            text-align: center;
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+            border-bottom: 1px dashed #7f7fbf;
+        }
+
+        .section-title {
+            color: #ffcc00;
+            font-size: 1.8em;
+        }
+
+        .form-section-title {
+            color: #99c2ff;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            padding-bottom: 5px;
+            border-bottom: 2px solid #ffcc00;
+            display: inline-block;
+        }
+
+        .input-group {
+            margin-bottom: 20px;
+        }
+
+        .input-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+
+        .input-group input, 
+        .input-group select, 
+        .input-group textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #5c5c8e;
+            border-radius: 5px;
+            background-color: #3b3b5b;
+            color: #ffffff;
+            font-size: 1em;
+            box-sizing: border-box;
+        }
+
+        .input-group textarea {
+            resize: vertical;
+        }
+
+        .hint {
+            font-size: 0.9em;
+            color: #aaaaaa;
+            margin-top: 5px;
+        }
+
+        button[type="submit"] {
+            display: block;
+            width: 100%;
+            padding: 15px;
+            background-color: #ffcc00;
+            color: #1a1a2e;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.2em;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            margin-top: 30px;
+        }
+
+        button[type="submit"]:hover {
+            background-color: #e6b800;
+        }
+
+        .message-box {
+            padding: 25px;
+            border-radius: 8px;
+            margin-top: 30px;
+            text-align: center;
+        }
+
+        .success {
+            background-color: #38761d;
+            border: 3px solid #6aa84f;
+        }
+
+        .error {
+            background-color: #cc0000;
+            border: 3px solid #ff6666;
+        }
+
+        .message-title {
+            color: #ffffff;
+            margin-top: 0;
+            font-size: 1.8em;
+        }
+
+        .important-note {
+            font-size: 1.1em;
+            margin-top: 15px;
+        }
+
+        .telegram-number {
+            font-size: 2em;
+            color: #ffcc00;
+            font-weight: bold;
+            margin: 10px 0;
+        }
+
+        @media (max-width: 768px) {
+            .header {
+                flex-direction: column;
+                padding: 15px 5%;
+            }
+            .logo-container {
+                margin: 10px 0;
+            }
+            .main-title {
+                font-size: 2em;
+            }
+            .container {
+                padding: 20px;
+            }
+        }
+    </style>
+    </head>
+<body>
+
+    <header class="header">
+        <div class="logo-container">
+            <img src="logo_universite.jpg" alt="شعار جامعة أحمد زبانة" class="logo">
+        </div>
+        <div class="title-container">
+            <h1 class="main-title">بانوراما الجامعة للفيلم القصير</h1>
+            <p class="subtitle">نادي طلاب المستقبل - FCE</p>
+        </div>
+        <div class="logo-container">
+            <img src="logo_club.jpg" alt="شعار نادي FCE" class="logo">
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="intro-section">
+            <h2 class="section-title">مرحباً بكم في منصة التسجيل</h2>
+            <p>املأ النموذج أدناه للانضمام إلى مسابقة البانوراما. تأكد من مطابقة جميع البيانات لشروط المسابقة.</p>
+        </div>
+        
+        <form id="registrationForm">
+            
+            <h3 class="form-section-title">I. معلومات المشارك</h3>
+            <div class="input-group">
+                <label for="fullName">الاسم واللقب:</label>
+                <input type="text" id="fullName" name="الاسم واللقب" required>
+            </div>
+            
+            <div class="input-group">
+                <label for="nationalID">رقم بطاقة التعريف الوطنية:</label>
+                <input type="text" id="nationalID" name="رقم بطاقة التعريف الوطنية" required pattern="[0-9]{10,}" title="يجب أن يتكون من أرقام فقط">
+                <p class="hint">يجب إدخال الأرقام فقط.</p>
+            </div>
+            
+            <div class="input-group">
+                <label for="registrationNumber">رقم التسجيل الجامعي (للطلاب):</label>
+                <input type="text" id="registrationNumber" name="رقم التسجيل الجامعي">
+            </div>
+
+            <h3 class="form-section-title">II. صفة المشاركة</h3>
+            <div class="input-group">
+                <label for="participationStatus">صفة المشاركة:</label>
+                <select id="participationStatus" name="صفة المشاركة" required onchange="toggleOtherStatus()">
+                    <option value="" disabled selected>-- اختر صفة المشاركة --</option>
+                    <option value="النوادي العلمية">النوادي العلمية</option>
+                    <option value="الطلبة بكامل التخصصات">الطلبة بكامل التخصصات</option>
+                    <option value="التنظيمات الطلابية">التنظيمات الطلابية</option>
+                    <option value="نوادي دور الشباب">نوادي دور الشباب</option>
+                    <option value="الجمعيات الثقافية">الجمعيات الثقافية</option>
+                    <option value="أخرى">أخرى</option>
+                </select>
+            </div>
+
+            <div class="input-group" id="otherStatusGroup" style="display: none;">
+                <label for="otherStatus">يرجى تحديد الصفة الأخرى:</label>
+                <input type="text" id="otherStatus" name="تحديد الصفة الأخرى">
+            </div>
+
+            <h3 class="form-section-title">III. معلومات التواصل</h3>
+            <div class="input-group">
+                <label for="phoneNumber">رقم الهاتف:</label>
+                <input type="tel" id="phoneNumber" name="رقم الهاتف" required pattern="[0-9]{10}" title="يجب إدخال 10 أرقام فقط (بدون رموز أو مسافات)">
+                <p class="hint">مثال: 0553371236</p>
+            </div>
+            
+            <div class="input-group">
+                <label for="email">البريد الإلكتروني (Email):</label>
+                <input type="email" id="email" name="البريد الإلكتروني" required>
+            </div>
+
+            <h3 class="form-section-title">IV. تفاصيل الفيلم</h3>
+            <div class="input-group">
+                <label for="filmTitle">عنوان الفيلم:</label>
+                <input type="text" id="filmTitle" name="عنوان الفيلم" required>
+            </div>
+            
+            <div class="input-group">
+                <label for="filmDuration">مدة الفيلم (بالدقائق):</label>
+                <input type="number" id="filmDuration" name="مدة الفيلم (بالدقائق)" min="3" max="15" step="0.1" required>
+                <p class="hint">يجب أن تتراوح المدة بين 3 و 15 دقيقة كحد أقصى. (يمكن استخدام الفواصل العشرies)</p>
+            </div>
+            
+            <div class="input-group">
+                <label for="filmSynopsis">نبذة عن الفيلم:</label>
+                <textarea id="filmSynopsis" name="نبذة عن الفيلم" rows="4" required></textarea>
+            </div>
+
+            <button type="submit" id="submitButton">✅ إرسال طلب التسجيل</button>
+        </form>
+
+        <div id="successMessage" class="message-box success" style="display: none;">
+            <h2 class="message-title">🎉 تهانينا! لقد تم تسجيلك بنجاح!</h2>
+            <p>تم استلام طلب مشاركتك في بانوراما الجامعة للفيلم القصير.</p>
+            <p class="important-note">
+                <strong>الخطوة التالية والأخيرة:</strong> يرجى إرسال ملف الفيلم، بالإضافة إلى **الملصق الدعائي (Poster)**، عبر تطبيق **تيليجرام (Telegram)** إلى رقم الهاتف التالي:
+            </p>
+            <p class="telegram-number">📞 0553371236</p>
+            <p>يجب إرسال الفيلم والملصق في أقرب وقت لضمان تأكيد مشاركتك في المسابقة.</p>
+        </div>
+        
+        <div id="closureMessage" class="message-box error" style="display: none;">
+            <h2 class="message-title">⏳ فترة التسجيل انتهت</h2>
+            <p class="important-note">
+                نأسف، لكن فترة التسجيل في بانوراما الجامعة للفيلم القصير قد انتهت في 10 ديسمبر. شكراً لاهتمامكم.
+            </p>
+        </div>
+
+        <div id="errorMessage" class="message-box error" style="display: none;">
+            <h2 class="message-title">❌ خطأ في الإرسال</h2>
+            <p>حدث خطأ أثناء إرسال بياناتك. يرجى التأكد من ملء جميع الحقول المطلوبة والمحاولة مرة أخرى.</p>
+            <p>Si l'erreur persiste, assurez-vous que vous testez sur une adresse **publique**.</p>
+        </div>
+
+    </div>
+    <script>
+        // Votre URL Apps Script finale
+        const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbxiWADAKbrfTw7b_JGpPhYirroH08CSk6hxio_ZDkgi6GfUgClSuGfBD7ECn0R5klru/exec"; 
+
+        // Fonction pour gérer l'affichage du champ "Autre"
+        function toggleOtherStatus() {
+            const statusSelect = document.getElementById('participationStatus');
+            const otherStatusGroup = document.getElementById('otherStatusGroup');
+            const otherStatusInput = document.getElementById('otherStatus');
+
+            if (statusSelect.value === 'أخرى') {
+                otherStatusGroup.style.display = 'block';
+                otherStatusInput.setAttribute('required', 'required');
+            } else {
+                otherStatusGroup.style.display = 'none';
+                otherStatusInput.removeAttribute('required');
+                otherStatusInput.value = ''; 
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const form = document.getElementById('registrationForm');
+            const submitButton = document.getElementById('submitButton');
+            const successMessage = document.getElementById('successMessage');
+            const errorMessage = document.getElementById('errorMessage');
+            const closureMessage = document.getElementById('closureMessage'); // Nouveau
+            const container = document.querySelector('.container');
+
+            // --- LOGIQUE DE VÉRIFICATION DE LA DATE LIMITE (10 décembre à 00:00:00) ---
+            const deadline = new Date('2025-12-10T00:00:00'); 
+            const now = new Date();
+
+            if (now >= deadline) {
+                // Si la date actuelle est passée ou égale à la date limite, fermer le formulaire.
+                form.style.display = 'none';
+                closureMessage.style.display = 'block';
+                return; // Arrêter l'exécution du reste du script
+            }
+            // --------------------------------------------------------------------------
+            
+            // 1. Configuration de l'IFRAME invisible pour la soumission
+            const iframeName = 'hidden_iframe';
+            let iframe = document.getElementById(iframeName);
+            if (!iframe) {
+                iframe = document.createElement('iframe');
+                iframe.id = iframeName;
+                iframe.name = iframeName;
+                iframe.style.display = 'none';
+                document.body.appendChild(iframe);
+            }
+
+            // 2. Configure le formulaire pour soumettre à l'URL Apps Script via l'iframe
+            form.setAttribute('target', iframeName);
+            form.setAttribute('action', SCRIPT_URL);
+            form.setAttribute('method', 'POST'); 
+
+            // 3. Ajout de l'écouteur d'événement pour la soumission
+            form.addEventListener('submit', function(e) {
+                
+                // Validation HTML native des champs
+                if (!form.checkValidity()) {
+                    return; 
+                }
+                
+                // Préparation de l'état de soumission
+                successMessage.style.display = 'none';
+                errorMessage.style.display = 'none';
+                submitButton.disabled = true;
+                submitButton.textContent = '... جاري الإرسال';
+                
+                // Gestion de la réponse de l'iframe après soumission
+                iframe.onload = function() {
+                    const iframeContent = iframe.contentWindow.document.body.innerHTML;
+                    
+                    if (iframeContent.includes('Success')) {
+                        // SUCCÈS : Masquer le formulaire et afficher le message vert
+                        form.style.display = 'none';
+                        successMessage.style.display = 'block';
+                        container.scrollIntoView({ behavior: 'smooth' });
+                    } else {
+                        // ÉCHEC : Afficher le message rouge
+                        errorMessage.style.display = 'block';
+                        console.error('Submission failed. Check Google Apps Script deployment settings ("Anyone" access is mandatory) and logs.');
+                    }
+                    
+                    // Rétablit l'état initial du bouton
+                    submitButton.disabled = false;
+                    submitButton.textContent = '✅ إرسال طلب التسجيل';
+                    iframe.onload = null;
+                };
+            });
+        });
+    </script>
+    </body>
+</html>
